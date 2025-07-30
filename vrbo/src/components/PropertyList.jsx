@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropertyCard from './PropertyCard';
 import './PropertyList.css';
 
 const PropertyList = () => {
@@ -11,19 +12,14 @@ const PropertyList = () => {
   }, []);
 
   return (
-    <div className="property-list-container">
-      <h2>Featured Properties</h2>
+    <section className="property-list-section">
+      <h2 className="property-list-title">Featured Properties</h2>
       <div className="property-grid">
         {properties.map(property => (
-          <div key={property.id} className="property-card">
-            <img src={property.image} alt={property.title} />
-            <h3>{property.title}</h3>
-            <p>{property.location}</p>
-            <p>${property.price} per night</p>
-          </div>
+          <PropertyCard key={property.id} property={property} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,0 +1,67 @@
+.destinations-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 20px 0;
+}
+
+@font-face {
+  font-family: 'CentraNo2-Book';
+  src: url('/fonts/CentraNo2-Book.woff2') format('woff2');
+}
+
+.destinations-title {
+    font-family: 'CentraNo2-Book', sans-serif;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.destinations-carousel-wrapper {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 15px;
+    gap: 20px;
+}
+
+.destinations-carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.destinations-carousel-wrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.destinations-carousel-item {
+    flex: 0 0 auto;
+    width: 280px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    scroll-snap-align: start;
+    transition: transform 0.2s ease-in-out;
+}
+
+.destinations-carousel-item:hover {
+    transform: translateY(-5px);
+}
+
+.destinations-carousel-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.destinations-carousel-item p {
+    margin: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}

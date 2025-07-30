@@ -1,0 +1,169 @@
+.weekend-getaways-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+.weekend-getaways-header {
+  margin-bottom: 25px;
+  padding-left: 10px; /* Align with carousel items */
+}
+
+.weekend-getaways-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.weekend-getaways-subtitle {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.weekend-getaways-carousel-wrapper {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 15px;
+  gap: 20px;
+}
+
+.weekend-getaways-carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.weekend-getaways-carousel-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.getaway-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  scroll-snap-align: start;
+  transition: transform 0.2s ease-in-out;
+}
+
+.getaway-card:hover {
+  transform: translateY(-5px);
+}
+
+.getaway-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.getaway-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.image-overlay-arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.getaway-card:hover .image-overlay-arrows {
+  opacity: 1;
+}
+
+.arrow-button {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: all 0.2s ease-in-out;
+}
+
+.arrow-button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 35px;
+  height: 35px;
+}
+
+.rating-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #4CAF50; /* Default green */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.rating-badge.green {
+  background-color: #4CAF50;
+}
+
+.rating-badge.yellow {
+  background-color: #FFC107;
+}
+
+.rating-badge.red {
+  background-color: #F44336;
+}
+
+.getaway-info {
+  padding: 15px;
+}
+
+.getaway-location {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.getaway-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.getaway-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.getaway-nights,
+.getaway-fees {
+  font-size: 0.85em;
+  color: #666;
+}
