@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.navigation a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.user-actions a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #0077c2;
+  font-weight: 500;
+}

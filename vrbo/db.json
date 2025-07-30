@@ -1,0 +1,45 @@
+
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Charming Cottage in the Woods",
+      "location": "Asheville, North Carolina",
+      "description": "A beautiful and cozy cottage perfect for a romantic getaway.",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+      "id": 2,
+      "title": "Modern Loft in Downtown",
+      "location": "New York, New York",
+      "description": "Stylish loft in the heart of the city, close to all attractions.",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+    },
+    {
+      "id": 3,
+      "title": "Beachfront Villa with a Pool",
+      "location": "Malibu, California",
+      "description": "Stunning villa with a private pool and direct access to the beach.",
+      "price": 500,
+      "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+      "id": 4,
+      "title": "Ski Chalet near the Slopes",
+      "location": "Aspen, Colorado",
+      "description": "Cozy chalet with a fireplace, perfect for a ski trip.",
+      "price": 400,
+      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+      "id": 5,
+      "title": "Cabin in the Mountains",
+      "location": "Gatlinburg, Tennessee",
+      "description": "A rustic cabin with breathtaking mountain views.",
+      "price": 200,
+      "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+    }
+  ]
+}
