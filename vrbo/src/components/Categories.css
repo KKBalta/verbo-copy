@@ -21,3 +21,22 @@
 .category-item span {
   font-weight: 500;
 }
+
+/* Mobile adjustments for Categories */
+@media (max-width: 768px) {
+  .categories-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .category-item {
+    flex: 1 1 calc(33% - 1rem); /* 3 items per row */
+    min-width: 100px;
+  }
+
+  .category-item img {
+    width: 40px;
+    height: 40px;
+  }
+}

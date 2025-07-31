@@ -1,0 +1,50 @@
+[
+    {
+        "booking_id": 1,
+        "property_id": 1,
+        "property_title": "Charming Cottage in the Woods",
+        "location": "Asheville, North Carolina",
+        "check_in": "2025-07-22",
+        "check_out": "2025-07-29",
+        "guests": 2,
+        "nights": 7,
+        "total_price": 1050,
+        "booking_date": "2025-07-30 20:54:06"
+    },
+    {
+        "booking_id": 2,
+        "property_id": 2,
+        "property_title": "Modern Loft in Downtown",
+        "location": "New York, New York",
+        "check_in": "2025-07-22",
+        "check_out": "2025-07-29",
+        "guests": 2,
+        "nights": 7,
+        "total_price": 2100,
+        "booking_date": "2025-07-30 20:54:09"
+    },
+    {
+        "booking_id": 3,
+        "property_id": 3,
+        "property_title": "Beachfront Villa with a Pool",
+        "location": "Malibu, California",
+        "check_in": "2025-07-22",
+        "check_out": "2025-07-29",
+        "guests": 2,
+        "nights": 7,
+        "total_price": 3500,
+        "booking_date": "2025-07-30 20:54:10"
+    },
+    {
+        "booking_id": 4,
+        "property_id": 4,
+        "property_title": "Ski Chalet near the Slopes",
+        "location": "Aspen, Colorado",
+        "check_in": "2025-07-27",
+        "check_out": "2025-07-30",
+        "guests": 2,
+        "nights": 3,
+        "total_price": 1200,
+        "booking_date": "2025-07-30 21:10:22"
+    }
+]

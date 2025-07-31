@@ -1,0 +1,97 @@
+:root {
+  --vibrant-blue: #007bff;
+}
+
+.promotional-cards-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.promotional-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.promotional-card {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.33% - 20px); /* Three cards per row on desktop */
+  min-width: 300px; /* Minimum width for cards */
+  max-width: 400px; /* Max width to prevent cards from getting too wide */
+  height: 110px; /* Fixed height for consistency */
+}
+
+.card-content-left {
+  background-color: var(--vibrant-blue);
+  color: rgb(227, 225, 225);
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 50%; /* Occupy 50% of the card width */
+}
+
+.card-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.card-call-to-action {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 0.7em;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.card-call-to-action .arrow {
+  margin-left: 5px;
+  font-size: 1.2em;
+}
+
+.card-image-right {
+  flex: 0 0 50%; /* Occupy 50% of the card width */
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .promotional-card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .promotional-card {
+    flex: 1 1 90%; /* One card per row on mobile */
+    height: auto; /* Allow height to adjust */
+    flex-direction: column; /* Stack content and image vertically */
+  }
+
+  .card-content-left,
+  .card-image-right {
+    flex: 1 1 100%; /* Take full width when stacked */
+  }
+
+  .card-image {
+    height: 150px; /* Smaller height for image on mobile */
+  }
+}

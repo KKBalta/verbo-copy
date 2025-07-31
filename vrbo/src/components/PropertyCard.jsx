@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './PropertyCard.css';
 
-const PropertyCard = ({ property }) => {
+const PropertyCard = ({ property, checkInDate, checkOutDate, guests, onBookingSuccess }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [bookingMessage, setBookingMessage] = useState('');
 
   const getRatingColor = (rating) => {
     if (rating >= 8) {
@@ -26,10 +26,46 @@ const PropertyCard = ({ property }) => {
     );
   };
 
+  const handleBookNow = async () => {
+    if (!checkInDate || !checkOutDate || !guests) {
+      setBookingMessage('Please select check-in, check-out dates, and number of guests in the search bar.');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/book', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          property_id: property.id,
+          check_in: checkInDate,
+          check_out: checkOutDate,
+          guests: parseInt(guests),
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setBookingMessage(`Booking successful! Total price: ${data.booking_details.total_price} for ${data.booking_details.nights} nights.`);
+        if (onBookingSuccess) {
+          onBookingSuccess(data.booking_details);
+        }
+      } else {
+        setBookingMessage(`Booking failed: ${data.error}`);
+      }
+    } catch (error) {
+      setBookingMessage('An error occurred during booking.');
+      console.error('Booking error:', error);
+    }
+  };
+
   return (
     <div className="property-card">
       <div className="property-image-container">
-        <img src={property.images[currentImageIndex]} alt={property.title} className="property-image" />
+        <img src={property.images[currentImageIndex]} alt={property.title} className="property-image" loading="lazy" />
         {property.images.length > 1 && (
           <>
             <button className="prev-button" onClick={handlePrevImage}>&#10094;</button>
@@ -44,6 +80,8 @@ const PropertyCard = ({ property }) => {
           {property.rating}
         </div>
         <p className="property-price">${property.price} per night</p>
+        <button className="book-now-button" onClick={handleBookNow}>Book Now</button>
+        {bookingMessage && <p className="booking-message">{bookingMessage}</p>}
       </div>
     </div>
   );

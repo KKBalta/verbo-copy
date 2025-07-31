@@ -13,6 +13,7 @@ const PropertyStyleGallery = ({ propertyTypes }) => {
               src={propertyType.imageUrl}
               alt={propertyType.name}
               className="style-card-image"
+              loading="lazy"
             />
             <p className="style-card-name">{propertyType.name}</p>
           </div>

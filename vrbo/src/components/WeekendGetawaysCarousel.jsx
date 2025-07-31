@@ -93,7 +93,7 @@ const WeekendGetawaysCarousel = () => {
         {exampleGetaways.map((getaway) => (
           <div className="getaway-card" key={getaway.id}>
             <div className="getaway-image-container">
-              <img src={getaway.imageUrl} alt={getaway.title} className="getaway-image" />
+              <img src={getaway.imageUrl} alt={getaway.title} className="getaway-image" loading="lazy" />
               <div className="image-overlay-arrows">
                 <button className="arrow-button left-arrow">&#10094;</button>
                 <button className="arrow-button right-arrow">&#10095;</button>

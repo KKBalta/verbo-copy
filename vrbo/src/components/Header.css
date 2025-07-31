@@ -25,3 +25,30 @@
   color: #0077c2;
   font-weight: 500;
 }
+
+/* Mobile adjustments for Header */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .logo img {
+    margin-left: 0; /* Remove left margin on mobile */
+    margin-bottom: 1rem; /* Add some space below logo */
+  }
+
+  .navigation,
+  .user-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navigation a,
+  .user-actions a {
+    margin: 0.5rem 0.8rem; /* Adjust spacing for mobile links */
+  }
+}
+

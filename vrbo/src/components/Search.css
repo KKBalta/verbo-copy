@@ -60,3 +60,35 @@
   cursor: pointer;
   height: 45px; /* Align with input fields */
 }
+
+.date-error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Mobile adjustments for Search */
+@media (max-width: 768px) {
+  .search-container {
+    padding: 4rem 1rem;
+  }
+
+  .search-title {
+    font-size: 2rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .search-input {
+    margin-bottom: 1rem;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
